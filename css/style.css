@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,155 +7,275 @@
 }
 
 body, input, button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #efefef;
 }
 
 input, button {
     font-size: 16px;
 }
 
-.head_bar {
-    padding: 12px;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: top 0.3s;
+    align-items: center;
+    z-index: 3;
+    background-color: white;
+    padding: 15px 100px;
+    box-shadow: 0px 1px 5px rgb(0 0 0 / 20%);
+}
+
+.navbar a {
+    color: #333;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 16px;
+ }
+
+ .navbar_head {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: cornflowerblue;
+ }
+
+ .navbar_head > h2 {
+    padding-right: 16px;
+    color: rgb(148, 91, 206);
+ }
+
+.nav_list {
+    display: flex;
+    padding-right: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+.nav_item {
+    list-style-type: none;
+ }
+
+ .nav_item:hover {
+    font-weight: bolder;
+ }
+
+ .btn {
+    padding: 12px 20px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    font-family:"Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    color: #333;
+    font-weight: bolder;
+}
+
+.btn_signup {
+    border-radius: 8px;
+    background-color: rgb(148, 91, 206);
     color: white;
+    box-shadow: 0 10px 40px rgba(148, 91, 206, 0.2);
+    border-radius: 50px;
+}
+
+.btn_signup:hover {
+    background-color: rgb(178, 123, 233);
 }
 
 main {
-    max-width: 800px;
-    width: 80%;
-    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    margin: 60px auto;
     padding: 16px;
-
 }
 
 .input_section {
     display: flex;
-    flex-direction: column;
-    padding: 16px;
-    border: 1px solid black;
+    padding: 25px 0;
+    margin: 30px 20px;
     border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
-.input_section > h2 {
-    text-align: center;
-    color: cornflowerblue;
+.input_section > img {
+    width: 40%;
+    padding: 20px;
+  } 
+
+.input-form {
+    margin-bottom: 20px;
 }
 
-.input_section > form > .input {
-    margin: 8px 0;
+.input-form > h2 {
+    color: #333;
 }
 
-.input_section > form > button {
-    background-color: cornflowerblue;
+.input-form > form > .input {
+    margin: 14px 0;
+}
+
+.input-form > form > button {
+    background-color: rgb(148, 91, 206);
+    box-shadow: 0 10px 40px rgba(148, 91, 206, 0.3);
     color: white;
     border: 0;
-    border-radius: 5px;
+    border-radius: 50px;
     display: block;
     width: 100%;
     padding: 8px;
     cursor: pointer;
+    padding: 12px 30px;
 }
 
-.input_section > form > button > span {
+.input-form > form > button:hover {
+    background-color: rgb(178, 123, 233);
+}
+
+.input-form > form > button > span {
     font-weight: bold;
 }
 
-.input_section > form > .input > input {
+.input-form > form > .input > input {
     display: block;
     width: 100%;
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #945BCE 10%, #fff 100%);
+    border-image-slice: 1;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-weight: bolder;
 }
 
+input[type=text]:focus {
+    border: 1px solid #945BCE;
+ }
 
-
-.input_section > form > .input > label {
-    color: cornflowerblue;
-    font-weight: bold;
+.input-form > form > .input > label {
+    color: #333;
+    font-weight: lighter;
 }
 
-.input_section > form > .input_inline {
-    margin: 12px 0;
+.input-form > form > .input_inline {
+    margin: 20px 0;
     display: flex;
     align-items: center;
 }
 
-.input_section > form > .input_inline > label {
-    color: cornflowerblue;
-    font-weight: bold;
+.input-form > form > .input_inline > label {
+    color: #333;
+    font-weight: lighter;
     margin-right: 10px;
 }
 
+#inputBookIsComplete {
+    color: #945BCE;
+}
+
 .search_section {
-    margin: 16px 0;
+    margin: 30px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 16px;
-    border: 1px solid black;
+    background-color: white;
     border-radius: 10px;
+    box-shadow: 0 10px 40px 0 rgb(0 0 0 / 10%);
 }
 
 .search_section > h2 {
-    color: cornflowerblue;
+    color: #333;
+    text-align: center;
 }
 
 .search_section > form {
     padding: 16px;
     width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr 0.5fr;
-    grid-gap: 10px;
-}
-
-.search_section > form > label {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .search_section > form > input {
-    padding: 5px;
-    border-radius: 5px;
+    display: block;
+    width: 70%;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #945BCE 10%, #fff 100%);
+    border-image-slice: 1;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-weight: lighter;
 }
 
 .search_section > form > button {
-    background-color: cornflowerblue;
+    padding: 12px 20px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    font-family:"Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(148, 91, 206);
     color: white;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
+    box-shadow: 0 10px 40px rgba(148, 91, 206, 0.3);
+    border-radius: 50px;
+}
+
+.search_section > form > button:hover {
+    background-color: rgb(178, 123, 233);
 }
 
 .book_shelf {
-    margin: 16px 0 0 0;
-    border: 1px solid black;
+    margin: 30px 20px;;
+    background-color: white;
     padding: 16px;
     border-radius: 10px;
+    box-shadow: 0 10px 40px 0 rgb(0 0 0 / 10%)
 }
 
 .book_shelf > h2 {
-    color: cornflowerblue;
+    color: #333;
+    text-align: center;
 }
 
 .book_shelf > .book_list {
     padding: 16px;
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 15px;
+    flex-wrap: wrap;
 }
 
 .book_shelf > .book_list > .book_item {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
     border-radius: 5px;
     margin: 10px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.book_item:hover {
+    border: 1px solid rgb(148, 91, 206);
 }
 
 .book_shelf > .book_list > .book_item > h3, p {
     margin: 8px 0;
 }
 
-.book_shelf > .book_list > .book_item > .action > button {
+.year {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item  > button {
     border: 0;
     padding: 5px;
     margin: 0 5px 0 0;
@@ -161,12 +283,32 @@ main {
     cursor: pointer;
 }
 
-.book_shelf > .book_list > .book_item > .action > .green {
-    background-color: darkgreen;
-    color: white;
+.book_shelf > .book_list > .book_item  > .incompleted {
+    background: url('../assets/icon/incompleted.svg');
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
 }
 
-.book_shelf > .book_list > .book_item > .action > .red {
-    background-color: darkred;
-    color: white;
+.book_shelf > .book_list > .book_item  > .completed {
+    background: url('../assets/icon/completed.svg');
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.book_shelf > .book_list > .book_item  > .deleted {
+    background: url('../assets/icon/delete.svg');
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
 }
