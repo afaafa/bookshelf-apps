@@ -99,7 +99,7 @@ function addTaskToCompleted(taskElement) {
 }
 
 function removeTaskFromCompleted(taskElement) {
-    let confirmDelete = confirm("Sure to deleted book?");
+    /*let confirmDelete = confirm("Sure to deleted book?");
     const bookPosition = findBookIndex(taskElement[BOOK_ITEMID]);
     books.splice(bookPosition, 1);
 
@@ -108,6 +108,28 @@ function removeTaskFromCompleted(taskElement) {
     } else {
         return false;
     }
+    updateDataToStorage();*/
+    const bookPosition = findBookIndex(taskElement[BOOK_ITEMID]);
+    books.splice(bookPosition, 1);
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            taskElement.remove();
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        }
+    })
     updateDataToStorage();
 }
 
@@ -134,7 +156,7 @@ function bookSearch(keyword) {
     for (let i = 0; i < titlebooks.length; i++) {
         const titleText = titlebooks[i].textContent || titlebooks[i].innerText;
 
-        if (titleText.toUpperCase().indexOf(filter) > -1) {
+        if (titleText.toUpperCase().includes(filter)) {
             titlebooks[i].closest(".book_item").style.display = "";
         } else {
             titlebooks[i].closest(".book_item").style.display = "none";
