@@ -1,0 +1,6 @@
+@media screen and (max-width: 699px) {
+    .input_section {
+        display: grid;
+        padding: 25px;
+    }
+}
