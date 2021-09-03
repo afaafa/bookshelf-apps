@@ -99,16 +99,6 @@ function addTaskToCompleted(taskElement) {
 }
 
 function removeTaskFromCompleted(taskElement) {
-    /*let confirmDelete = confirm("Sure to deleted book?");
-    const bookPosition = findBookIndex(taskElement[BOOK_ITEMID]);
-    books.splice(bookPosition, 1);
-
-    if (confirmDelete == true) {
-        taskElement.remove();
-    } else {
-        return false;
-    }
-    updateDataToStorage();*/
     const bookPosition = findBookIndex(taskElement[BOOK_ITEMID]);
     books.splice(bookPosition, 1);
 
@@ -163,3 +153,20 @@ function bookSearch(keyword) {
         }
     }
 }
+
+const menu = document.querySelector(".icon-menu");
+const navList = document.querySelector(".navbar_head");
+const navItem = document.querySelector(".nav_item");
+
+menu.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    menu.classList.toggle("active");
+    navList.classList.toggle("active");
+}
+
+function closeMenu() {
+    menu.classList.remove("active");
+    navList.classList.remove("active");
+}
+

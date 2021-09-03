@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 * {
     padding: 0;
@@ -15,6 +16,12 @@ input, button {
     font-size: 16px;
 }
 
+.header-bar {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -27,18 +34,25 @@ input, button {
     background-color: white;
     padding: 15px 100px;
     box-shadow: 0px 1px 5px rgb(0 0 0 / 20%);
+    flex-wrap: wrap;
 }
 
-.navbar a {
-    color: #333;
-    padding: 0 16px;
-    text-decoration: none;
-    font-size: 16px;
- }
+.navbar > h2 {
+    margin-right: 30px;
+    color: #945BCE;
+}
+
+.icon-menu {
+    display: none;
+}
 
  .navbar_head {
     display: flex;
     align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    padding-top: 0;
+    text-align: center;
  }
 
  .navbar_head > h2 {
@@ -48,13 +62,18 @@ input, button {
 
 .nav_list {
     display: flex;
-    padding-right: 20px;
-    margin: 0;
-    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
 }
 
-.nav_item {
+
+.nav_item > a {
     list-style-type: none;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
  }
 
  .nav_item:hover {
@@ -311,4 +330,69 @@ input[type=text]:focus {
     margin-left: 10px;
     cursor: pointer;
     border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header-bar {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .icon-menu {
+        color: #945BCE;
+        background-color: transparent;
+        min-width: 44px;
+        min-height: 44px;
+        display: block;
+        border: 2px solid #945BCE;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+    .navbar_head {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding-bottom: 2rem;
+    }
+    .navbar_head.active {
+        left: 0;
+    }
+    .nav_list {
+        display: block;
+    }
+    .nav_item {
+        margin: 3rem 0;
+    }
+    .btn-list {
+        display: block;
+    }
+    .btn {
+        margin-bottom: 5px;
+        display: grid;
+    }
+    .input_section {
+        display: grid;
+        padding: 25px;
+    }
+    .input_section > img {
+        width: 100%;
+    }
+    .input-form > h2 {
+        text-align: center;
+    }
 }

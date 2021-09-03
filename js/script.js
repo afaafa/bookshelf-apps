@@ -14,10 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const searchInput = document.getElementById("searchBookTitle").value;
         bookSearch(searchInput);
     })
-
+    
     if(isStorageExist()){
         loadDataFromStorage();
     }
+
 });
 
 document.addEventListener("ondatasaved", () => {
@@ -27,3 +28,5 @@ document.addEventListener("ondatasaved", () => {
  document.addEventListener("ondataloaded", () => {
     refreshDataFromBooks();
  });
+
+ 

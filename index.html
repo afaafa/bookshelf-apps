@@ -9,23 +9,23 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <nav id="navbar" class="navbar">
-            <div class="navbar_head">
-                <h2>Libraree</h2>
-                <ul id="drawer" class="nav_list">
+    <header class="header-bar">
+        <nav class="navbar">
+            <h2>Libraree</h2>
+            <button class="icon-menu" data-target="#drawer">☰ Menu</button>
+            <div class="navbar_head" id="drawer">
+                <ul class="nav_list">
                     <li class="nav_item"><a href="#" title="overview">Overview</a></li>
                     <li class="nav_item"><a href="#" title="aboutUs">About Us</a></li>
                     <li class="nav_item"><a href="#" title="producs">Our Products</a></li>
                     <li class="nav_item"><a href="https://github.com/afaafa" title="contactUs">Contact Us</a></li>
                 </ul>
-            </div>
-            <div>
-                <button class="btn">Sign In</button>
-                <button class="btn btn_signup">Sign Up</button>
+                <div class="btn-list">
+                    <button class="btn">Sign In</button>
+                    <button class="btn btn_signup">Sign Up</button>
+                </div>
             </div>
         </nav>
     </header>
