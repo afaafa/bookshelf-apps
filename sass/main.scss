@@ -177,6 +177,9 @@ main {
                     color: $bgColorNav;
                     box-shadow: $boxShadowViolet;
                     text-align: center;
+                    &:hover {
+                        background-color: $hoverButtonViolet;
+                    }
                     span {
                         font-weight: normal;
                     }
@@ -200,6 +203,9 @@ main {
                 background-color: $violet;
                 color: $bgColorNav;
                 box-shadow: $boxShadowViolet;
+                &:hover {
+                    background-color: $hoverButtonViolet;
+                }
             }
         }
     }
@@ -249,7 +255,6 @@ main {
 }
 
 @import 'responsive';
-
 
 
 

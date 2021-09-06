@@ -157,6 +157,9 @@ main .input_section .input-form form .btn-submit {
   box-shadow: 0 10px 22px rgba(148, 91, 206, 0.3);
   text-align: center;
 }
+main .input_section .input-form form .btn-submit:hover {
+  background-color: #b27be9;
+}
 main .input_section .input-form form .btn-submit span {
   font-weight: normal;
 }
@@ -177,6 +180,9 @@ main .search_section form .btn-search {
   background-color: #945BCE;
   color: white;
   box-shadow: 0 10px 22px rgba(148, 91, 206, 0.3);
+}
+main .search_section form .btn-search:hover {
+  background-color: #b27be9;
 }
 main .book_item {
   margin: 20px 0;
