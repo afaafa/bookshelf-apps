@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-family: "Quicksand", sans-serif;
+  background-color: #efefef;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 12px 20px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 50px;
+  border: none;
+}
+
+.header-bar {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.header-bar .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: top 0.3s;
+  align-items: center;
+  z-index: 3;
+  background-color: white;
+  padding: 15px 25px;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+.header-bar .navbar h2 {
+  margin-right: 30px;
+  color: #945BCE;
+}
+.header-bar .navbar .icon-menu {
+  display: block;
+  color: #945BCE;
+  background-color: transparent;
+  min-width: 44px;
+  min-height: 44px;
+  border: 2px solid #945BCE;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.header-bar .navbar .navbar_head {
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+}
+.header-bar .navbar .navbar_head .nav_list {
+  display: grid;
+  list-style-type: none;
+  margin: 15px;
+}
+.header-bar .navbar .navbar_head .nav_list .nav_item {
+  padding: 10px 0;
+}
+.header-bar .navbar .navbar_head .nav_list .nav_item a {
+  color: #333;
+  text-decoration: none;
+}
+.header-bar .navbar .navbar_head .nav_list .nav_item:hover {
+  font-weight: bolder;
+}
+.header-bar .navbar .navbar_head .btn-list {
+  display: inline-grid;
+}
+.header-bar .navbar .navbar_head .btn_signin {
+  background-color: transparent;
+}
+.header-bar .navbar .navbar_head .btn_signup {
+  background-color: #945BCE;
+  color: white;
+  box-shadow: 0 10px 22px rgba(148, 91, 206, 0.3);
+}
+.header-bar .navbar .navbar_head .btn_signup:hover {
+  background-color: #b27be9;
+}
+.header-bar .navbar .active {
+  left: 0;
+}
+
+main .search_section form input, main .input_section .input-form form .input input {
+  display: block;
+  width: 100%;
+  padding: 7px 4px;
+  background-color: white;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #945BCE 10%, #fff 100%);
+  border-image-slice: 1;
+}
+
+main {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 16px;
+}
+main .bg-card {
+  margin: 30px 20px;
+  background-color: white;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+}
+main .input_section {
+  justify-content: center;
+}
+main .input_section img {
+  width: 100%;
+}
+main .input_section .input-form h3 {
+  text-align: center;
+}
+main .input_section .input-form form .input {
+  margin: 14px 0;
+  text-align: left;
+}
+main .input_section .input-form form .input label {
+  color: #333;
+  font-weight: lighter;
+}
+main .input_section .input-form form .input_inline {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+main .input_section .input-form form .input_inline label {
+  font-weight: lighter;
+  margin-right: 5px;
+}
+main .input_section .input-form form .btn-submit {
+  background-color: #945BCE;
+  color: white;
+  box-shadow: 0 10px 22px rgba(148, 91, 206, 0.3);
+  text-align: center;
+}
+main .input_section .input-form form .btn-submit span {
+  font-weight: normal;
+}
+main .search_section {
+  text-align: center;
+}
+main .search_section h3 {
+  margin-bottom: 10px;
+}
+main .search_section form {
+  display: flex;
+  justify-content: center;
+}
+main .search_section form input {
+  width: 70%;
+}
+main .search_section form .btn-search {
+  background-color: #945BCE;
+  color: white;
+  box-shadow: 0 10px 22px rgba(148, 91, 206, 0.3);
+}
+main .book_item {
+  margin: 20px 0;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+main .book_item:hover {
+  border: 1px solid #945BCE;
+}
+main .book_item .completed {
+  background: url("../assets/icon/completed.svg");
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+main .book_item .incompleted {
+  background: url("../assets/icon/incompleted.svg");
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+main .book_item .deleted {
+  background: url("../assets/icon/delete.svg");
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.book_shelf > h3 {
+  color: #333;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .input-form {
+    text-align: center;
+  }
+
+  .book_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body, input, button {
+    font-size: 16px;
+  }
+
+  .header-bar .navbar .icon-menu {
+    display: none;
+  }
+
+  .header-bar .navbar .navbar_head {
+    display: flex !important;
+    flex-basis: auto;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    padding-top: 0;
+    position: relative;
+    left: 0px;
+    top: auto;
+    box-shadow: none;
+    padding-bottom: 0px;
+  }
+  .header-bar .navbar .navbar_head .nav_list {
+    display: flex;
+  }
+  .header-bar .navbar .navbar_head .nav_list .nav_item {
+    margin-right: 15px;
+  }
+  .header-bar .navbar .navbar_head .btn-list {
+    display: flex;
+  }
+
+  main .input_section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  main .input_section img {
+    width: 40%;
+    padding: 20px;
+  }
+
+  .book_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

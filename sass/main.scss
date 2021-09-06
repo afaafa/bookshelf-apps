@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+//colors
+$violet: #945BCE;
+$darkGrey: #333;
+$bgColor: #efefef;
+$bgColorNav: white;
+$transparent : transparent;
+$hoverButtonViolet: rgb(178, 123, 233);
+$boxShadowViolet: 0 10px 22px rgba(148, 91, 206, 0.3);
+$boxShadowNav: 0 22px 40px rgba(0, 0, 0, 0.1);
+$borderImage: linear-gradient(to right, #945BCE 10%, #fff 100%);
+
+//font
+$fontSize14: 14px;
+$fontSize16: 16px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #efefef;
+    font-size: $fontSize14;
+}
+
+.btn {
+    padding: 12px 20px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 50px;
+    border: none;
+}
+
+.header-bar {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: top 0.3s;
+        align-items: center;
+        z-index: 3;
+        background-color: $bgColorNav;
+        padding: 15px 25px;
+        box-shadow: $boxShadowNav;
+        flex-wrap: wrap;
+        h2 {
+            margin-right: 30px;
+            color: $violet;
+        }
+        .icon-menu {
+            display: block;
+            color: $violet;
+            background-color: $transparent;
+            min-width: 44px;
+            min-height: 44px;
+            border: 2px solid $violet;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        .navbar_head {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            background-color: $bgColorNav;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: $boxShadowNav;
+            padding-bottom: 2rem;
+            
+            .nav_list {
+               display: grid;
+               list-style-type: none;
+               margin: 15px;
+               .nav_item {
+                   padding: 10px 0;
+                   a {
+                        color: $darkGrey;
+                        text-decoration: none;
+                   }
+                   &:hover {
+                       font-weight: bolder;
+                   }
+               }
+            }
+            .btn-list {
+                display: inline-grid;
+            }
+            .btn_signin {
+                background-color: $transparent;
+            }
+            .btn_signup {
+                background-color: $violet;
+                color: $bgColorNav;
+                box-shadow: $boxShadowViolet;
+                &:hover {
+                    background-color: $hoverButtonViolet;
+                }
+            }
+         }
+        .active {
+            left: 0;
+        }
+    }
+}
+
+%input-border-bottom {
+    display: block;
+    width: 100%;
+    padding: 7px 4px;
+    background-color: $bgColorNav;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid $transparent;
+    border-image: $borderImage;
+    border-image-slice: 1;
+}
+
+
+main {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 16px;
+    .bg-card {
+        margin: 30px 20px;
+        background-color: $bgColorNav;
+        box-shadow: $boxShadowNav;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .input_section {
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+        .input-form {
+            h3 {
+                text-align: center;
+            }
+            form {
+                .input {
+                    margin: 14px 0;
+                    text-align: left;
+                    label {
+                        color: $darkGrey;
+                        font-weight: lighter;
+                    }
+                    input {
+                        @extend %input-border-bottom;
+                    }
+                }
+                .input_inline {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+                    label {
+                        font-weight: lighter;
+                        margin-right: 5px;
+                    }
+                }
+                .btn-submit {
+                    background-color: $violet;
+                    color: $bgColorNav;
+                    box-shadow: $boxShadowViolet;
+                    text-align: center;
+                    span {
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    .search_section {
+        h3 {
+            margin-bottom: 10px;
+        }
+        text-align: center;
+        form {
+            display: flex;
+            justify-content: center;
+            input {
+                @extend %input-border-bottom;
+                width: 70%;
+            }
+            .btn-search {
+                background-color: $violet;
+                color: $bgColorNav;
+                box-shadow: $boxShadowViolet;
+            }
+        }
+    }
+    
+    .book_item {
+        margin: 20px 0;
+        box-shadow: $boxShadowNav;
+        padding: 16px;
+        border-radius: 5px;
+        background-color: $transparent;
+        &:hover {
+            border: 1px solid $violet;
+        }
+        .completed {
+            background: url('../assets/icon/completed.svg');
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .incompleted {
+            background: url('../assets/icon/incompleted.svg');
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        .deleted {
+            background: url('../assets/icon/delete.svg');
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+
+.book_shelf > h3 {
+    color: $darkGrey;
+    text-align: center;
+}
+
+@import 'responsive';
+
+
+
+
+

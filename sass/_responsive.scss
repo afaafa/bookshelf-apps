@@ -1,0 +1,54 @@
+@media screen and (min-width: 768px) {
+    .input-form {
+        text-align: center;       
+    }
+    .book_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body, input, button {
+        font-size: $fontSize16;
+    }
+    .header-bar .navbar .icon-menu {
+        display: none;
+    }
+    .header-bar .navbar .navbar_head {
+        display: flex !important;
+        flex-basis: auto;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-end;
+        padding-top: 0;
+        position: relative;
+        left: 0px;
+        top: auto;
+        box-shadow: none;
+        padding-bottom: 0px;
+        .nav_list {
+            display: flex;
+            .nav_item {
+                margin-right: 15px;
+            }
+        }
+        .btn-list {
+            display: flex;
+        }
+      }
+    main .input_section {
+        display: flex;
+        justify-content: space-evenly;
+        img {
+            width: 40%;
+            padding: 20px;
+        }
+    }
+    .book_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}

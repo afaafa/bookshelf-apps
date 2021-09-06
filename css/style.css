@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 * {
     padding: 0;
@@ -10,9 +9,6 @@
 body, input, button {
     font-family: 'Quicksand', sans-serif;
     background-color: #efefef;
-}
-
-input, button {
     font-size: 16px;
 }
 
@@ -55,22 +51,12 @@ input, button {
     text-align: center;
  }
 
- .navbar_head > h2 {
-    padding-right: 16px;
-    color: rgb(148, 91, 206);
- }
-
 .nav_list {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     list-style-type: none;
-    text-align: center;
 }
 
-
 .nav_item > a {
-    list-style-type: none;
     margin-right: 20px;
     text-decoration: none;
     color: #333;
@@ -85,16 +71,12 @@ input, button {
     display: inline-block;
     text-align: center;
     border: none;
-    font-family:"Quicksand", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
     background-color: white;
     color: #333;
     font-weight: bolder;
 }
 
 .btn_signup {
-    border-radius: 8px;
     background-color: rgb(148, 91, 206);
     color: white;
     box-shadow: 0 10px 40px rgba(148, 91, 206, 0.2);
@@ -224,7 +206,7 @@ input[type=text]:focus {
 
 .search_section > form > input {
     display: block;
-    width: 70%;
+    width: 100%;
     padding: 10px;
     background-color: white;
     border-bottom: 1px solid transparent;
@@ -241,7 +223,6 @@ input[type=text]:focus {
     display: inline-block;
     text-align: center;
     border: none;
-    font-family:"Quicksand", sans-serif;
     font-size: 16px;
     font-weight: 500;
     background-color: rgb(148, 91, 206);

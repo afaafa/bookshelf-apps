@@ -8,7 +8,7 @@
     <title>Bookshelf Apps</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header-bar">
@@ -23,17 +23,17 @@
                     <li class="nav_item"><a href="https://github.com/afaafa" title="contactUs">Contact Us</a></li>
                 </ul>
                 <div class="btn-list">
-                    <button class="btn">Sign In</button>
+                    <button class="btn btn_signin">Sign In</button>
                     <button class="btn btn_signup">Sign Up</button>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="input_section">
+        <section class="bg-card input_section">
             <img src="assets/image/books.svg" alt="books illustration">
             <div class="input-form">
-            <h2>Input New Book</h2>
+            <h3>Input New Book</h3>
                 <form id="inputBook">
                     <div class="input">
                         <label for="inputBookTitle">Title</label>
@@ -51,27 +51,27 @@
                         <label for="inputBookIsComplete">Finished Read</label>
                         <input id="inputBookIsComplete" type="checkbox">
                     </div>
-                    <button id="bookSubmit" type="submit">Put the book on the shelf <span>unfinished read</span></button>
+                    <button class="btn btn-submit" id="bookSubmit" type="submit"><span>Put the book on the shelf</span> unfinished read</button>
                 </form>
             </div>
         </section>
 
-        <section class="search_section">
-            <h2>Search Book</h2>
+        <section class="bg-card search_section">
+            <h3>Search Book</h3>
             <form id="searchBook">
                 <input id="searchBookTitle" type="text" placeholder="Input book title...">
-                <button id="searchSubmit" type="submit">Search</button>
+                <button class="btn btn-search" id="searchSubmit" type="submit">Search</button>
             </form>
         </section>
 
-        <section class="book_shelf">
-            <h2>Incompleted Read</h2>
+        <section class="bg-card book_shelf">
+            <h3>Incompleted Read</h3>
 
             <div id="incompleteBookshelfList" class="book_list"></div>
         </section>
 
-        <section class="book_shelf">
-            <h2>Completed Read</h2>
+        <section class="bg-card book_shelf">
+            <h3>Completed Read</h3>
 
             <div id="completeBookshelfList" class="book_list"></div>
         </section>
